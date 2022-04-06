@@ -1,0 +1,60 @@
+{
+    "name": "inputSystem",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "5e0513e7-4204-4850-818f-9778fdffd463",
+            "actions": [
+                {
+                    "name": "Touch",
+                    "type": "Button",
+                    "id": "3747caf6-afc2-402b-9ce2-f58db71b369d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TouchPosition",
+                    "type": "PassThrough",
+                    "id": "9160df01-d783-4014-8ef8-f30a3e874dd6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fbe86c55-516f-4c2a-9160-7df3ab9aab16",
+                    "path": "<Touchscreen>/primaryTouch/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "touch",
+                    "action": "Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c9b367a8-40e0-49d4-b5a3-3ffa260ca31e",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "touch",
+                    "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "touch",
+            "bindingGroup": "touch",
+            "devices": []
+        }
+    ]
+}
