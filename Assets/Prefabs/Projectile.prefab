@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 950379971719377564}
   - component: {fileID: 8462093220654822361}
   - component: {fileID: 5466791767549548458}
+  - component: {fileID: 5278426977537001357}
   m_Layer: 11
   m_Name: Projectile
   m_TagString: Projectile
@@ -94,7 +95,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2925138080324247080}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -121,3 +122,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &5278426977537001357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925138080324247080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c70ad404043151d41931886db14ababc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -17,7 +17,6 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     private Camera _camera;
     private CircleCollider2D _circleColl;
     private Rigidbody2D _rb;
-
     private Vector3 _posInGame = Vector3.zero;
     
     private void Start()
@@ -28,21 +27,17 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        print(eventData.position);
         CreateProjectile();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        print("DRAG");
         _posInGame = _camera.ScreenToWorldPoint(new Vector3(eventData.position.x, eventData.position.y, _zAxis));
         _projectileGO.transform.position = _posInGame;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        _rb.bodyType = RigidbodyType2D.Dynamic;
-        _circleColl.enabled = true;
         ShootProjectile();
     }
 
@@ -50,15 +45,23 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     {
         _projectileGO = Instantiate<GameObject>(projectilePrefab);
         _projectileGO.transform.position = this.transform.position;
-        _circleColl = _projectileGO.GetComponent<CircleCollider2D>();
-        _circleColl.enabled = false;
         _rb = _projectileGO.GetComponent<Rigidbody2D>();
     }
     
     private void ShootProjectile()
     {
+        _rb.bodyType = RigidbodyType2D.Dynamic;
         Vector3 mouseDelta = _centerOfZone.position - _posInGame;
-        // _rb.velocity = new Vector2(-mouseDelta.x, -mouseDelta.y) * speedProjectile;
-        _rb.velocity = mouseDelta * speedProjectile;
+        _rb.velocity = -mouseDelta * speedProjectile;
+        _rb.isKinematic = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        print("test");
+        if (other.transform.CompareTag("Ground"))
+        {
+            Destroy(_projectileGO);
+        }
     }
 }
