@@ -10,27 +10,25 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     
     public GameObject projectilePrefab;
     public float speedProjectile = 10.0f;
+    public Transform _centerOfZone;
     
     private GameObject _projectileGO;
     private float _zAxis;
     private Camera _camera;
     private CircleCollider2D _circleColl;
     private Rigidbody2D _rb;
-    private CircleCollider2D _colliderHalo;
-    private Vector3 _centerOfZone = Vector3.zero;
+
     private Vector3 _posInGame = Vector3.zero;
     
     private void Start()
     {
         _camera = Camera.main;
-        _colliderHalo = transform.GetComponent<CircleCollider2D>();
         _zAxis = transform.position.z + 5;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         print(eventData.position);
-        _colliderHalo.enabled = false;
         CreateProjectile();
     }
 
@@ -45,7 +43,6 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     {
         _rb.bodyType = RigidbodyType2D.Dynamic;
         _circleColl.enabled = true;
-        _colliderHalo.enabled = true;
         ShootProjectile();
     }
 
@@ -60,8 +57,8 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     
     private void ShootProjectile()
     {
-        _centerOfZone = transform.position;
-        Vector3 mouseDelta = _centerOfZone - _posInGame;
-        _rb.velocity = new Vector2(-mouseDelta.x, -mouseDelta.y) * speedProjectile;
+        Vector3 mouseDelta = _centerOfZone.position - _posInGame;
+        // _rb.velocity = new Vector2(-mouseDelta.x, -mouseDelta.y) * speedProjectile;
+        _rb.velocity = mouseDelta * speedProjectile;
     }
 }
