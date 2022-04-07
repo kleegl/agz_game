@@ -18,14 +18,20 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     private CircleCollider2D _circleColl;
     private Rigidbody2D _rb;
     private Vector3 _posInGame = Vector3.zero;
-    private Vector3 _lifeZone = Vector3.zero;
-    
+    private Vector3 _centerZone = Vector3.zero;
+    private float[] _boundsX;
+    private float[] _boundsY;
+
     private void Start()
     {
         _camera = Camera.main;
         _zAxis = transform.position.z + 5;
         _circleColl = GetComponent<CircleCollider2D>();
-        _lifeZone = _circleColl.bounds.extents;
+        _centerZone = _circleColl.bounds.center;
+        _boundsX = new []{_centerZone.x + _circleColl.radius, _centerZone.x - _circleColl.radius};
+        _boundsY = new []{_centerZone.y + _circleColl.radius, _centerZone.y - _circleColl.radius};
+        print(_boundsX);
+        print(_boundsY);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -35,11 +41,21 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
     public void OnDrag(PointerEventData eventData)
     {
+        print("click");
         _posInGame = _camera.ScreenToWorldPoint(new Vector3(eventData.position.x, eventData.position.y, _zAxis));
-        if ((_posInGame.x > _lifeZone.x))
+        print(_posInGame);
+
+        if ((_posInGame.x > _boundsX[0]) || (_posInGame.x < _boundsX[1]) || (_posInGame.y > _boundsY[0]) ||
+            (_posInGame.y < _boundsY[1]))
         {
-            Destroy(_projectileGO);
-            eventData.Reset();
+            eventData.pointerDrag = null;
+            ShootProjectile();
+        }
+        
+        if (_projectileGO == null)
+        {
+            eventData.pointerDrag = null;
+            return;
         }
         _projectileGO.transform.position = _posInGame;
     }
