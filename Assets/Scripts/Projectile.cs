@@ -24,6 +24,8 @@ public class Projectile : MonoBehaviour
         {
             Destroy(this.gameObject);
             Destroy(other.gameObject);
+
+            GamePlay.Score += 1;
         }
     }
 
