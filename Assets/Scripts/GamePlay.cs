@@ -29,10 +29,12 @@ public class GamePlay : MonoBehaviour
     {
         if (callsCount > 10)
         {
-            secondsBetweenCreateFire -= 0.02f;
+            secondsBetweenCreateFire -= 0.05f;
             callsCount = 0;
         }
-
+        
+        if(_fireList.Count > 10)
+            print("Replay");
         scoreText.text = $"{Score}";
     }
 
