@@ -17,9 +17,14 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        print(other.transform.position);
         if (other.transform.CompareTag("Ground"))
             Destroy(this.gameObject);
+
+        if (other.transform.CompareTag("Fire"))
+        {
+            Destroy(this.gameObject);
+            Destroy(other.gameObject);
+        }
     }
 
     private void Update()
