@@ -12,12 +12,23 @@ public class CloudCreator : MonoBehaviour
     public List<GameObject> cloudPrefabs;
     public float cloudSpeed = 5.0f;
     public float timeBetweenSpawnClouds = 5f;
+    public int startCountClouds = 6;
     
     private List<GameObject> _cloudList;
     
     private void Start()
     {
         _cloudList = new List<GameObject>();
+        for (int i = 0; i < startCountClouds; i++)
+        {
+            int randomCloud = UnityEngine.Random.Range(0, cloudPrefabs.Count);
+            GameObject cloudGO = Instantiate<GameObject>(cloudPrefabs[randomCloud]);
+            // cloudGO.transform.position.x = transform.position.x * -i/10;
+            Vector3 posAnchor = transform.position;
+            posAnchor.x *= -(i/1.5f);
+            cloudGO.transform.position = posAnchor;
+            _cloudList.Add(cloudGO);
+        }
         CreateCloud();
         Invoke("MovingClouds", 1f);
 
