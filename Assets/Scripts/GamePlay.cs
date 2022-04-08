@@ -15,7 +15,8 @@ public class GamePlay : MonoBehaviour
 
     [Header("UI")] 
     public Text scoreText;
-
+    public Text timeInGame;
+    
     private List<GameObject> _fireList;
     private int callsCount = 0;
 
@@ -27,14 +28,19 @@ public class GamePlay : MonoBehaviour
 
     private void Update()
     {
+        String time = $"{Time.time:f2}";
+        timeInGame.text = time;
         if (callsCount > 10)
         {
             secondsBetweenCreateFire -= 0.05f;
             callsCount = 0;
         }
-        
-        if(_fireList.Count > 10)
+
+        if (_fireList.Count > 10)
+        {
             print("Replay");
+            Application.Quit();
+        }
         scoreText.text = $"{Score}";
     }
 
