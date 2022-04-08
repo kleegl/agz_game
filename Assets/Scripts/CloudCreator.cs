@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.PlayerLoop;
 using Random = System.Random;
 
 public class CloudCreator : MonoBehaviour
@@ -9,11 +11,17 @@ public class CloudCreator : MonoBehaviour
 
     public List<GameObject> cloudPrefabs;
     public float cloudSpeed = 5.0f;
-    private int _cloudCount = 0;
+    public float timeBetweenSpawnClouds = 5f;
+    
     private List<GameObject> _cloudList;
+    
     private void Start()
     {
-        Invoke("CreateCloud", 1);
+        _cloudList = new List<GameObject>();
+        CreateCloud();
+        Invoke("MovingClouds", 1f);
+
+
     }
 
     private void Update()
@@ -21,7 +29,7 @@ public class CloudCreator : MonoBehaviour
         for (int i = 0; i < _cloudList.Count; i++)
         {
             Vector3 pos = _cloudList[i].transform.position;
-            pos.x += cloudSpeed;
+            pos.x -= cloudSpeed;
             _cloudList[i].transform.position = pos;
         }
     }
@@ -30,9 +38,9 @@ public class CloudCreator : MonoBehaviour
     {
         int randomCloud = UnityEngine.Random.Range(0, cloudPrefabs.Count);
         GameObject cloudGO = Instantiate<GameObject>(cloudPrefabs[randomCloud]);
-        _cloudList.Add(cloudGO);
         cloudGO.transform.position = transform.position;
-        
+        _cloudList.Add(cloudGO);
+        Invoke("CreateCloud", timeBetweenSpawnClouds);
     }
 }
 
