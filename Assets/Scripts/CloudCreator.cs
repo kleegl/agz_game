@@ -21,7 +21,8 @@ public class CloudCreator : MonoBehaviour
         for (int i = 0; i < _cloudList.Count; i++)
         {
             Vector3 pos = _cloudList[i].transform.position;
-            pos += Vector3.left;
+            pos.x += cloudSpeed;
+            _cloudList[i].transform.position = pos;
         }
     }
 
