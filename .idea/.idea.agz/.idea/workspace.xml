@@ -5,7 +5,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abb366c1-e751-48cb-83b2-3af6e7a128dc" name="Default Changelist" comment="" />
+    <list default="true" id="abb366c1-e751-48cb-83b2-3af6e7a128dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,9 +35,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Input.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GamePlay.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Water2D/EXAMPLES/10- Soda jet/ApplyPhysicsForceManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Water2D/EXAMPLES/3- High Viscosity fluid/3D - Water and lava stuffs/TransformToMouseDirection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" />
       </list>
     </option>
   </component>

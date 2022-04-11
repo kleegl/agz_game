@@ -23,7 +23,6 @@ public class CloudCreator : MonoBehaviour
         {
             int randomCloud = UnityEngine.Random.Range(0, cloudPrefabs.Count);
             GameObject cloudGO = Instantiate<GameObject>(cloudPrefabs[randomCloud]);
-            // cloudGO.transform.position.x = transform.position.x * -i/10;
             Vector3 posAnchor = transform.position;
             posAnchor.x *= -(i/1.5f);
             cloudGO.transform.position = posAnchor;
@@ -31,8 +30,6 @@ public class CloudCreator : MonoBehaviour
         }
         CreateCloud();
         Invoke("MovingClouds", 1f);
-
-
     }
 
     private void Update()
@@ -54,5 +51,3 @@ public class CloudCreator : MonoBehaviour
         Invoke("CreateCloud", timeBetweenSpawnClouds);
     }
 }
-
-// создавать по два облака так, чтобы первая пачка доходила до середины, и двигать справа налево
