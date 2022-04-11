@@ -7,7 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="abb366c1-e751-48cb-83b2-3af6e7a128dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonsAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ButtonsAction.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +37,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GamePlay.cs" />
         <option value="$PROJECT_DIR$/Assets/Water2D/EXAMPLES/10- Soda jet/ApplyPhysicsForceManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Water2D/EXAMPLES/3- High Viscosity fluid/3D - Water and lava stuffs/TransformToMouseDirection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonsAction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" />
       </list>
     </option>
   </component>
@@ -93,7 +92,7 @@
       <workItem from="1649400582031" duration="7876000" />
       <workItem from="1649660778130" duration="1214000" />
       <workItem from="1649694416463" duration="47000" />
-      <workItem from="1649697358254" duration="2685000" />
+      <workItem from="1649697358254" duration="3489000" />
     </task>
     <servers />
   </component>

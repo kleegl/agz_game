@@ -1905,7 +1905,7 @@ MonoBehaviour:
   - {fileID: 2011211035720794595, guid: 689b380eb710aad4991b35270f6d7feb, type: 3}
   - {fileID: 608862005116119593, guid: 159140861b6ea994cba93799e214393e, type: 3}
   cloudSpeed: 0.008
-  timeBetweenSpawnClouds: 7
+  timeBetweenSpawnClouds: 35
   startCountClouds: 5
 --- !u!4 &1526556976
 Transform:
