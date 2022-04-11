@@ -6,9 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abb366c1-e751-48cb-83b2-3af6e7a128dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +24,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62A0AEC5-FC33-44B3-B7E7-235EB7A545EB/8e/f5a150fe/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonsAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A92AD44-406B-4318-9677-3A464E9EC96E/5d/333dbc2f/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62A0AEC5-FC33-44B3-B7E7-235EB7A545EB/16/6637e0de/IEndDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E88FAA3A-AC57-4192-A3AC-9D4DAE8147A1/e8/4dcb629b/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62A0AEC5-FC33-44B3-B7E7-235EB7A545EB/d7/52d21fb5/IDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D3B66F0A-D4E3-4A55-B6EF-91AB84878193/a8/b441d998/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
@@ -38,6 +43,7 @@
         <option value="$PROJECT_DIR$/Assets/Water2D/EXAMPLES/10- Soda jet/ApplyPhysicsForceManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Water2D/EXAMPLES/3- High Viscosity fluid/3D - Water and lava stuffs/TransformToMouseDirection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonsAction.cs" />
       </list>
     </option>
   </component>
@@ -90,6 +96,7 @@
       <workItem from="1649347081198" duration="1791000" />
       <workItem from="1649400582031" duration="7876000" />
       <workItem from="1649660778130" duration="1214000" />
+      <workItem from="1649694416463" duration="47000" />
     </task>
     <servers />
   </component>
@@ -207,5 +214,13 @@
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/1920.6.1920.1040@0.0.1536.824" timestamp="1649253143979" />
     <state width="623" height="563" key="SwitcherDM/0.0.1536.824/1920.6.1920.1040@1920.6.1920.1040" timestamp="1649326061352" />
+    <state x="2536" y="243" key="run.anything.popup" timestamp="1649693725543">
+      <screen x="1920" y="6" width="1920" height="1040" />
+    </state>
+    <state x="2536" y="243" key="run.anything.popup/0.0.1536.824/1920.6.1920.1040@1920.6.1920.1040" timestamp="1649693725543" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1649694245502">
+      <screen x="1920" y="6" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.6.1920.1040@1920.6.1920.1040" timestamp="1649694245502" />
   </component>
 </project>
