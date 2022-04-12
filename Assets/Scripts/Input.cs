@@ -30,8 +30,8 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
         _centerZone = _circleColl.bounds.center;
         _boundsX = new []{_centerZone.x + _circleColl.radius, _centerZone.x - _circleColl.radius};
         _boundsY = new []{_centerZone.y + _circleColl.radius, _centerZone.y - _circleColl.radius};
-        print(_boundsX);
-        print(_boundsY);
+        // print(_boundsX);
+        // print(_boundsY);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
