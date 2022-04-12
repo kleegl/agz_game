@@ -7,10 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="abb366c1-e751-48cb-83b2-3af6e7a128dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TransitionController.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buttons/ButtonsAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buttons/ButtonsAction.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/HitGubButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/PlayButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/TwitterButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62A0AEC5-FC33-44B3-B7E7-235EB7A545EB/d7/52d21fb5/IDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/QuitButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,6 +56,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/OptionButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/HitGubButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/TwitterButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Transition.cs" />
       </list>
     </option>
   </component>
@@ -109,7 +111,7 @@
       <workItem from="1649660778130" duration="1214000" />
       <workItem from="1649694416463" duration="47000" />
       <workItem from="1649697358254" duration="3754000" />
-      <workItem from="1649750557516" duration="2660000" />
+      <workItem from="1649750557516" duration="3798000" />
     </task>
     <servers />
   </component>
