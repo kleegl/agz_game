@@ -6,15 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abb366c1-e751-48cb-83b2-3af6e7a128dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Fire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buttons/Buttons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buttons.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buttons/Buttons.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buttons.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonsActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ButtonsActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +57,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/TwitterButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Transition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/PlayButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/PauseButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonsActions.cs" />
       </list>
     </option>
@@ -120,7 +116,7 @@
       <workItem from="1649697358254" duration="3754000" />
       <workItem from="1649750557516" duration="3798000" />
       <workItem from="1649830586866" duration="7293000" />
-      <workItem from="1649854187113" duration="4152000" />
+      <workItem from="1649854187113" duration="6255000" />
     </task>
     <servers />
   </component>

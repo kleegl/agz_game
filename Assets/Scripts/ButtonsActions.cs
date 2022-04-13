@@ -5,23 +5,24 @@ using UnityEditor;
 using UnityEditor.SearchService;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 
 public class ButtonsActions : Buttons
 {
     public float transitionDelayTime = 5.0f;
-    private Animator animator;
+    public static bool isPause;
+    private Animator _animator;
     private bool isMenu;
-    private bool isPause;
     private void Awake()
     {
-        animator = GameObject.Find("Transition").GetComponent<Animator>();
+        _animator = GameObject.Find("Transition").GetComponent<Animator>();
     }
 
     private void Start()
     {
-        isMenu = true;
         isPause = false;
+        isMenu = true;
     }
 
     public void OnOpenTwitterLink()
@@ -53,12 +54,15 @@ public class ButtonsActions : Buttons
     {
         if (isPause == false)
         {
-            Time.timeScale = 0;
-            isPause = true;
+            Time.timeScale = 0;   
+            isPause = true; 
         }
-
-        Time.timeScale = 1;
-        isPause = false;
+        else
+        {
+            Time.timeScale = 1;   
+            isPause = false; 
+        }
+        
     }
 
     public void OnApplicationQuit()
@@ -74,15 +78,20 @@ public class ButtonsActions : Buttons
     IEnumerator DelayLoadTransitionInGame()
     {
         yield return new WaitForSeconds(transitionDelayTime);
-        animator.Play("TransitionOut");
+        _animator.Play("TransitionOut");
         SceneManager.LoadScene("Game");
         isMenu = false;
     }
 
     IEnumerator DelayLoadTransitionInMenu()
     {
+        if (isPause)
+        {
+            isPause = false;
+            Time.timeScale = 1;
+        }
         yield return new WaitForSeconds(transitionDelayTime);
-        animator.Play("TransitionIn");
+        _animator.Play("TransitionIn");
         SceneManager.LoadScene("Menu");
         isMenu = true;
     }

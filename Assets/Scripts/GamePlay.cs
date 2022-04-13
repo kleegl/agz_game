@@ -38,8 +38,10 @@ public class GamePlay : MonoBehaviour
 
         if (_fireList.Count > 10)
         {
-            print("Replay");
-            Application.Quit();
+            ButtonsActions buttonsActions = new ButtonsActions();
+            buttonsActions.OnPause();
+            Text Replay = new GameObject("Replay").AddComponent<Text>();
+            
         }
         scoreText.text = $"{Score}";
     }

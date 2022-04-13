@@ -35,12 +35,15 @@ public class CloudCreator : MonoBehaviour
 
     private void Update()
     {
+        // Move Clouds
+        if (ButtonsActions.isPause)
+            return;
         for (int i = 0; i < _cloudList.Count; i++)
         {
             Vector3 pos = _cloudList[i].transform.position;
             pos.x -= cloudSpeed;
             _cloudList[i].transform.position = pos;
-            DeleteCoud(i);
+            DeleteCloud(i);
         }
     }
 
@@ -53,7 +56,7 @@ public class CloudCreator : MonoBehaviour
         Invoke("CreateCloud", timeBetweenSpawnClouds);
     }
 
-    private void DeleteCoud(int i)
+    private void DeleteCloud(int i)
     {
         if (_cloudList[i].transform.position.x <= xPointForDeleteCloud)
         {
