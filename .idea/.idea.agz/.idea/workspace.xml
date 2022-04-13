@@ -7,7 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="abb366c1-e751-48cb-83b2-3af6e7a128dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buttons/PlayButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buttons/PlayButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionIn.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TransitionIn.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionOut.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TransitionOut.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +47,6 @@
         <option value="$PROJECT_DIR$/Assets/Water2D/EXAMPLES/10- Soda jet/ApplyPhysicsForceManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Water2D/EXAMPLES/3- High Viscosity fluid/3D - Water and lava stuffs/TransformToMouseDirection.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonsAction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/Buttons.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/StartButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Input.cs" />
@@ -54,6 +56,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/TwitterButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Transition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/PlayButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" />
       </list>
     </option>
   </component>
@@ -109,7 +112,7 @@
       <workItem from="1649694416463" duration="47000" />
       <workItem from="1649697358254" duration="3754000" />
       <workItem from="1649750557516" duration="3798000" />
-      <workItem from="1649830586866" duration="3278000" />
+      <workItem from="1649830586866" duration="5312000" />
     </task>
     <servers />
   </component>

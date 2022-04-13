@@ -2354,9 +2354,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5503977142294600092, guid: 11d561cbb6251734c81bc99ca0696551, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 241432749}
     - target: {fileID: 5503977143579997438, guid: 11d561cbb6251734c81bc99ca0696551, type: 3}
       propertyPath: m_Name
       value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503977143579997438, guid: 11d561cbb6251734c81bc99ca0696551, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5503977143579997439, guid: 11d561cbb6251734c81bc99ca0696551, type: 3}
       propertyPath: m_RootOrder

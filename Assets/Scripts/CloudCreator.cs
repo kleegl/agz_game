@@ -13,6 +13,7 @@ public class CloudCreator : MonoBehaviour
     public float cloudSpeed = 5.0f;
     public float timeBetweenSpawnClouds = 5f;
     public int startCountClouds = 6;
+    public float xPointForDeleteCloud = -12.0f;
     
     private List<GameObject> _cloudList;
     
@@ -39,6 +40,7 @@ public class CloudCreator : MonoBehaviour
             Vector3 pos = _cloudList[i].transform.position;
             pos.x -= cloudSpeed;
             _cloudList[i].transform.position = pos;
+            DeleteCoud(i);
         }
     }
 
@@ -49,5 +51,14 @@ public class CloudCreator : MonoBehaviour
         cloudGO.transform.position = transform.position;
         _cloudList.Add(cloudGO);
         Invoke("CreateCloud", timeBetweenSpawnClouds);
+    }
+
+    private void DeleteCoud(int i)
+    {
+        if (_cloudList[i].transform.position.x <= xPointForDeleteCloud)
+        {
+            Destroy(_cloudList[i]);
+            _cloudList.Remove(_cloudList[i]);
+        }
     }
 }
