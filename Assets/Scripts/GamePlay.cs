@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -12,6 +13,8 @@ public class GamePlay : MonoBehaviour
     public float secondsBetweenCreateFire = 1.0f;
     public List <GameObject> windowsList;
     public GameObject firePrefab;
+    public GameObject pauseWindowPrefab;
+    public GameObject canvas;
 
     [Header("UI")] 
     public Text scoreText;
@@ -19,6 +22,13 @@ public class GamePlay : MonoBehaviour
     
     private List<GameObject> _fireList;
     private int callsCount = 0;
+    private ButtonsActions buttonsActions;
+
+    private void Awake()
+    {
+        canvas = GameObject.Find("CanvasGame");
+        buttonsActions = canvas.AddComponent<ButtonsActions>();
+    }
 
     private void Start()
     {
@@ -38,10 +48,8 @@ public class GamePlay : MonoBehaviour
 
         if (_fireList.Count > 10)
         {
-            ButtonsActions buttonsActions = new ButtonsActions();
-            buttonsActions.OnPause();
-            Text Replay = new GameObject("Replay").AddComponent<Text>();
-            
+            if (ButtonsActions.isPause == false)
+                PauseGame();
         }
         scoreText.text = $"{Score}";
     }
@@ -54,5 +62,13 @@ public class GamePlay : MonoBehaviour
         _fireList.Add(fireGO);
         callsCount += 1;
         Invoke("CreateFire", secondsBetweenCreateFire);
+    }
+
+    // finish it
+    private void PauseGame()
+    {
+        buttonsActions.OnPause();
+        GameObject pauseWindow = Instantiate<GameObject>(pauseWindowPrefab);
+        pauseWindow.transform.parent = canvas.transform;
     }
 }

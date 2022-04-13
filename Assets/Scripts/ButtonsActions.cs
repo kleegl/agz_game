@@ -75,6 +75,11 @@ public class ButtonsActions : Buttons
         StartCoroutine(DelayLoadTransitionInMenu());
     }
 
+    public void OnReplay()
+    {
+        SceneManager.LoadScene("Game");
+    }
+
     IEnumerator DelayLoadTransitionInGame()
     {
         yield return new WaitForSeconds(transitionDelayTime);
