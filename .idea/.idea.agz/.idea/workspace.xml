@@ -6,11 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abb366c1-e751-48cb-83b2-3af6e7a128dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionIn.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TransitionIn.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionOut.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TransitionOut.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62A0AEC5-FC33-44B3-B7E7-235EB7A545EB/16/6637e0de/IEndDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E88FAA3A-AC57-4192-A3AC-9D4DAE8147A1/e8/4dcb629b/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/OptionButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/PauseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/HitGubButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -57,6 +56,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Transition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/PlayButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CloudCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/PauseButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonsActions.cs" />
       </list>
     </option>
   </component>
@@ -112,7 +113,8 @@
       <workItem from="1649694416463" duration="47000" />
       <workItem from="1649697358254" duration="3754000" />
       <workItem from="1649750557516" duration="3798000" />
-      <workItem from="1649830586866" duration="5312000" />
+      <workItem from="1649830586866" duration="7293000" />
+      <workItem from="1649854187113" duration="105000" />
     </task>
     <servers />
   </component>
