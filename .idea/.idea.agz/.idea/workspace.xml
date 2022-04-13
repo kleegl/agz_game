@@ -6,11 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abb366c1-e751-48cb-83b2-3af6e7a128dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.agz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TransitionController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Fire_Animation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Fire_Animation.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionAnimationOff.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionAnimationOff.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionAnimationOn.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionAnimationOn.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TransitionController.controller.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Transition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Transition.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +118,7 @@
       <workItem from="1649694416463" duration="47000" />
       <workItem from="1649697358254" duration="3754000" />
       <workItem from="1649750557516" duration="3798000" />
+      <workItem from="1649830586866" duration="2858000" />
     </task>
     <servers />
   </component>
