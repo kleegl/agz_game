@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.SearchService;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,13 +11,19 @@ public class ButtonsActions : Buttons
 {
     public float transitionDelayTime = 5.0f;
     private Animator animator;
-    
-
+    private bool isMenu;
+    private bool isPause;
     private void Awake()
     {
         animator = GameObject.Find("Transition").GetComponent<Animator>();
     }
-    
+
+    private void Start()
+    {
+        isMenu = true;
+        isPause = false;
+    }
+
     public void OnOpenTwitterLink()
     {
         Application.OpenURL("https://twitter.com/j_mefedov");
@@ -34,7 +41,7 @@ public class ButtonsActions : Buttons
 
     public void OnPlay()
     {
-        StartCoroutine(DelayLoadScene());
+        StartCoroutine(DelayLoadTransitionInGame());
     }
 
     public void OnQuit()
@@ -42,20 +49,41 @@ public class ButtonsActions : Buttons
         Application.Quit();
     }
 
-    public void OnApplicationPause(bool pauseStatus)
+    public void OnPause()
     {
-        pauseStatus = true;
+        if (isPause == false)
+        {
+            Time.timeScale = 0;
+            isPause = true;
+        }
+
+        Time.timeScale = 1;
+        isPause = false;
     }
 
-    private void OnApplicationQuit()
+    public void OnApplicationQuit()
     {
-        print("Application ended");
+        print("Application was end");
     }
 
-    IEnumerator DelayLoadScene()
+    public void OnMenu()
     {
-        animator.Play("TransitionIn");
+        StartCoroutine(DelayLoadTransitionInMenu());
+    }
+
+    IEnumerator DelayLoadTransitionInGame()
+    {
         yield return new WaitForSeconds(transitionDelayTime);
+        animator.Play("TransitionOut");
         SceneManager.LoadScene("Game");
+        isMenu = false;
+    }
+
+    IEnumerator DelayLoadTransitionInMenu()
+    {
+        yield return new WaitForSeconds(transitionDelayTime);
+        animator.Play("TransitionIn");
+        SceneManager.LoadScene("Menu");
+        isMenu = true;
     }
 }

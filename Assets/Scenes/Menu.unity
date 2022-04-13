@@ -451,7 +451,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 321093974}
-        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: ButtonsActions, Assembly-CSharp
         m_MethodName: OnPlay
         m_Mode: 1
         m_Arguments:
@@ -509,11 +509,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 321093969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b50ebab093f8bd4c87e407ea8e5909a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbe3ffbabda50c4da7e55e3598dfa91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  transistionDelayTime: 5
+  transitionDelayTime: 0.2
 --- !u!1 &367154025
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,9 +644,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 425742602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4df0704215196a46b8928d7c3a69667, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbe3ffbabda50c4da7e55e3598dfa91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionDelayTime: 5
 --- !u!114 &425742605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,8 +693,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 425742604}
-        m_TargetAssemblyTypeName: HitGubButton, Assembly-CSharp
-        m_MethodName: OnHitGubLink
+        m_TargetAssemblyTypeName: ButtonsActions, Assembly-CSharp
+        m_MethodName: OnOpenHitGubLink
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1149,7 +1149,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 759665740}
-        m_TargetAssemblyTypeName: QuitButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: ButtonsActions, Assembly-CSharp
         m_MethodName: OnQuit
         m_Mode: 1
         m_Arguments:
@@ -1207,9 +1207,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 759665735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3fadc132579a504b8b3e15bf47256b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbe3ffbabda50c4da7e55e3598dfa91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionDelayTime: 5
 --- !u!1 &834148060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,8 +1296,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 834148065}
-        m_TargetAssemblyTypeName: OptionButton, Assembly-CSharp
-        m_MethodName: OnOptions
+        m_TargetAssemblyTypeName: ButtonsActions, Assembly-CSharp
+        m_MethodName: OnOption
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1353,9 +1354,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 834148060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64723071adfb72f4582a3e94037b0bad, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbe3ffbabda50c4da7e55e3598dfa91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionDelayTime: 5
 --- !u!1 &869787089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,6 +1885,7 @@ MonoBehaviour:
   cloudSpeed: 0.008
   timeBetweenSpawnClouds: 35
   startCountClouds: 5
+  xPointForDeleteCloud: -12
 --- !u!4 &1526556976
 Transform:
   m_ObjectHideFlags: 0
@@ -2226,8 +2229,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1881386312}
-        m_TargetAssemblyTypeName: TwitterButton, Assembly-CSharp
-        m_MethodName: OnTwitterLink
+        m_TargetAssemblyTypeName: ButtonsActions, Assembly-CSharp
+        m_MethodName: OnOpenTwitterLink
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2284,9 +2287,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1881386307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b40cb57883fbaf24f8a2da14b1f193f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbe3ffbabda50c4da7e55e3598dfa91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionDelayTime: 5
 --- !u!1 &2040376874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5503977143579997438, guid: 11d561cbb6251734c81bc99ca0696551, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5503977143579997439, guid: 11d561cbb6251734c81bc99ca0696551, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2503,5 +2511,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8124868441786822684, guid: 11d561cbb6251734c81bc99ca0696551, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 11d561cbb6251734c81bc99ca0696551, type: 3}
