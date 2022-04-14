@@ -396,7 +396,7 @@ MonoBehaviour:
   - {fileID: 180268240}
   - {fileID: 1357946663}
   firePrefab: {fileID: 8266154478417373979, guid: 617f429853641484ba1d7de2e523a099, type: 3}
-  pauseWindowPrefab: {fileID: 1559750258440241574, guid: 8220496ef78501b4ab813ea855f01cbf, type: 3}
+  replayWindowPrefab: {fileID: 2766097143180037808, guid: baf26a7fbc028ca468b51b17530c9173, type: 3}
   canvas: {fileID: 0}
   scoreText: {fileID: 677484695}
   timeInGame: {fileID: 703882262}
@@ -2699,7 +2699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -28.199982, y: -19.431839}
+  m_AnchoredPosition: {x: -28.199951, y: -19.431854}
   m_SizeDelta: {x: -50, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1656763351

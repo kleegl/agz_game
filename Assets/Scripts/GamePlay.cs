@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Button = UnityEngine.UIElements.Button;
 using Random = UnityEngine.Random;
 
 public class GamePlay : MonoBehaviour
 {
     public static int Score = 0;
+    public static int callsReplayWindow = 0;
     
     public float secondsBetweenCreateFire = 1.0f;
     public List <GameObject> windowsList;
     public GameObject firePrefab;
-    public GameObject pauseWindowPrefab;
+    public GameObject replayWindowPrefab;
     public GameObject canvas;
 
     [Header("UI")] 
@@ -22,12 +24,12 @@ public class GamePlay : MonoBehaviour
     
     private List<GameObject> _fireList;
     private int callsCount = 0;
-    private ButtonsActions buttonsActions;
+    
+    
 
     private void Awake()
     {
         canvas = GameObject.Find("CanvasGame");
-        buttonsActions = canvas.AddComponent<ButtonsActions>();
     }
 
     private void Start()
@@ -49,7 +51,9 @@ public class GamePlay : MonoBehaviour
         if (_fireList.Count > 10)
         {
             if (ButtonsActions.isPause == false)
-                PauseGame();
+            {
+                ReplayGameWindow();
+            }
         }
         scoreText.text = $"{Score}";
     }
@@ -63,12 +67,23 @@ public class GamePlay : MonoBehaviour
         callsCount += 1;
         Invoke("CreateFire", secondsBetweenCreateFire);
     }
-
-    // finish it
-    private void PauseGame()
+    
+    private void ReplayGameWindow()
     {
-        buttonsActions.OnPause();
-        GameObject pauseWindow = Instantiate<GameObject>(pauseWindowPrefab);
-        pauseWindow.transform.parent = canvas.transform;
+        if (callsReplayWindow == 0)
+        {
+            callsReplayWindow += 1;
+            Time.timeScale = 0;
+            ButtonsActions.isPause = true;
+            GameObject pauseWindow = Instantiate<GameObject>(replayWindowPrefab);
+            pauseWindow.transform.parent = canvas.transform;
+        }
+        return;
+    }
+
+    private void DeleteFire()
+    {
+        if (ButtonsActions.deleteFireList == true)
+            _fireList.Clear();
     }
 }

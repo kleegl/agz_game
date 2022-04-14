@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonsActions : Buttons
 {
+    public static bool deleteFireList;
+    
     public float transitionDelayTime = 5.0f;
     public static bool isPause;
     private Animator _animator;
@@ -21,6 +23,7 @@ public class ButtonsActions : Buttons
 
     private void Start()
     {
+        deleteFireList = false;
         isPause = false;
         isMenu = true;
     }
@@ -55,14 +58,13 @@ public class ButtonsActions : Buttons
         if (isPause == false)
         {
             Time.timeScale = 0;   
-            isPause = true; 
+            isPause = true;
         }
         else
         {
             Time.timeScale = 1;   
-            isPause = false; 
+            isPause = false;
         }
-        
     }
 
     public void OnApplicationQuit()
@@ -77,7 +79,9 @@ public class ButtonsActions : Buttons
 
     public void OnReplay()
     {
-        SceneManager.LoadScene("Game");
+        GamePlay.callsReplayWindow = 0;
+        deleteFireList = true;
+        StartCoroutine(DelayLoadTransitionInMenu());
     }
 
     IEnumerator DelayLoadTransitionInGame()
