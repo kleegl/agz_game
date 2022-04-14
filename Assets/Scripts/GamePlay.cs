@@ -24,18 +24,17 @@ public class GamePlay : MonoBehaviour
     
     private List<GameObject> _fireList;
     private int callsCount = 0;
-    
-    
 
     private void Awake()
     {
         canvas = GameObject.Find("CanvasGame");
+        replayWindowPrefab.SetActive(false);
     }
 
     private void Start()
     {
         _fireList = new List<GameObject>();
-        Invoke("CreateFire", 1f);
+        Invoke("CreateFire", 2f);
     }
 
     private void Update()
@@ -62,7 +61,7 @@ public class GamePlay : MonoBehaviour
     {
         GameObject fireGO = Instantiate<GameObject>(firePrefab);
         int window = Random.Range(0, windowsList.Count);
-        fireGO.transform.position = windowsList[window].transform.position;
+        fireGO.transform.localPosition = windowsList[window].transform.position;
         _fireList.Add(fireGO);
         callsCount += 1;
         Invoke("CreateFire", secondsBetweenCreateFire);
@@ -75,8 +74,7 @@ public class GamePlay : MonoBehaviour
             callsReplayWindow += 1;
             Time.timeScale = 0;
             ButtonsActions.isPause = true;
-            GameObject pauseWindow = Instantiate<GameObject>(replayWindowPrefab);
-            pauseWindow.transform.parent = canvas.transform;
+            replayWindowPrefab.SetActive(true);
         }
         return;
     }
