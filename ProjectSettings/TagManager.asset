@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Cube
+  - Projectile
+  - Ground
+  - Fire
+  - Bucket
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Zone_Layer
+  - Projectile_Layer
   - 
   - 
   - 
