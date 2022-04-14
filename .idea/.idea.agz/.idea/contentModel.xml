@@ -7,16 +7,23 @@
       <e p="agz.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="InputSystem" t="Include">
-          <e p="InputManager.cs" t="Include" />
-          <e p="PlayerInputActions.cs" t="Include" />
-        </e>
         <e p="Scripts" t="Include">
-          <e p="SceneInstantiate.cs" t="Include" />
-          <e p="Singleton.cs" t="Include" />
-          <e p="TestingInputSystem.cs" t="Include" />
-          <e p="TestTouch.cs" t="Include" />
-          <e p="Touching.cs" t="Include" />
+          <e p="Buttons" t="Include">
+            <e p="HitGubButton.cs" t="Include" />
+            <e p="MenuButton.cs" t="Include" />
+            <e p="OptionButton.cs" t="Include" />
+            <e p="PauseButton.cs" t="Include" />
+            <e p="PlayButton.cs" t="Include" />
+            <e p="QuitButton.cs" t="Include" />
+            <e p="TwitterButton.cs" t="Include" />
+          </e>
+          <e p="Buttons.cs" t="Include" />
+          <e p="ButtonsActions.cs" t="Include" />
+          <e p="CloudCreator.cs" t="Include" />
+          <e p="GamePlay.cs" t="Include" />
+          <e p="Input.cs" t="Include" />
+          <e p="Projectile.cs" t="Include" />
+          <e p="Transition.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
