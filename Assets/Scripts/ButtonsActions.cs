@@ -87,6 +87,7 @@ public class ButtonsActions : Buttons
         _animator.Play("TransitionOut");
         SceneManager.LoadScene("Game");
         _isMenu = false;
+        GamePlay.Score = 0;
     }
 
     IEnumerator DelayLoadTransitionInMenu()

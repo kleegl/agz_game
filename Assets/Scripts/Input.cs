@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 
 public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -69,7 +70,7 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
     private void CreateProjectile()
     {
-        if (ButtonsActions.isPause) return;
+        if ((GamePlay.callsReplayWindow == 1) || (ButtonsActions.isPause)) return;
         _projectileGO = Instantiate<GameObject>(projectilePrefab);
         _projectileGO.transform.position = this.transform.position;
         _rb = _projectileGO.GetComponent<Rigidbody2D>();
