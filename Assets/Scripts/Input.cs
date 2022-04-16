@@ -41,9 +41,9 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
     public void OnDrag(PointerEventData eventData)
     {
-        print("click");
+        // print("click");
         _posInGame = _camera.ScreenToWorldPoint(new Vector3(eventData.position.x, eventData.position.y, _zAxis));
-        print(_posInGame);
+        // print(_posInGame);
 
         if ((_posInGame.x > _boundsX[0]) || (_posInGame.x < _boundsX[1]) || (_posInGame.y > _boundsY[0]) ||
             (_posInGame.y < _boundsY[1]))
@@ -69,6 +69,7 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
     private void CreateProjectile()
     {
+        if (ButtonsActions.isPause) return;
         _projectileGO = Instantiate<GameObject>(projectilePrefab);
         _projectileGO.transform.position = this.transform.position;
         _rb = _projectileGO.GetComponent<Rigidbody2D>();

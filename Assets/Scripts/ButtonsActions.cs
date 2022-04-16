@@ -38,12 +38,7 @@ public class ButtonsActions : Buttons
     {
         print("Options");
     }
-
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(0, 0,200, 200), "nothing :)");
-    }
-
+    
     public void OnPlay()
     {
         
