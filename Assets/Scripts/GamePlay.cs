@@ -39,8 +39,9 @@ public class GamePlay : MonoBehaviour
 
     private void Update()
     {
-        String time = $"{Time.time:f2}";
+        String time = $"{Time.timeSinceLevelLoad:f2}";
         timeInGame.text = time;
+        
         if (callsCount > 10)
         {
             secondsBetweenCreateFire -= 0.05f;
@@ -54,6 +55,10 @@ public class GamePlay : MonoBehaviour
                 ReplayGameWindow();
             }
         }
+        
+        if(ButtonsActions.deleteFireList)
+            DeleteFireList();
+        
         scoreText.text = $"{Score}";
     }
 
@@ -64,7 +69,10 @@ public class GamePlay : MonoBehaviour
         fireGO.transform.localPosition = windowsList[window].transform.position;
         _fireList.Add(fireGO);
         callsCount += 1;
-        Invoke("CreateFire", secondsBetweenCreateFire);
+        if ((ButtonsActions.isPause == false) && (callsReplayWindow == 0))
+        {
+            Invoke("CreateFire", secondsBetweenCreateFire);
+        }
     }
     
     private void ReplayGameWindow()
@@ -72,16 +80,17 @@ public class GamePlay : MonoBehaviour
         if (callsReplayWindow == 0)
         {
             callsReplayWindow += 1;
-            Time.timeScale = 0;
             ButtonsActions.isPause = true;
             replayWindowPrefab.SetActive(true);
         }
-        return;
     }
 
-    private void DeleteFire()
+    public void DeleteFireList()
     {
-        if (ButtonsActions.deleteFireList == true)
-            _fireList.Clear();
+        foreach (GameObject fire in _fireList)
+            Destroy(fire);
+        _fireList.Clear();
+        ButtonsActions.deleteFireList = false;
+        callsReplayWindow = 0;
     }
 }

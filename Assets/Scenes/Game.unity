@@ -3101,7 +3101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbe3ffbabda50c4da7e55e3598dfa91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionDelayTime: 5
+  transitionDelayTime: 0.2
 --- !u!114 &2643822258311300151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3330,7 +3330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbe3ffbabda50c4da7e55e3598dfa91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionDelayTime: 5
+  transitionDelayTime: 0.2
 --- !u!222 &6946514097069148500
 CanvasRenderer:
   m_ObjectHideFlags: 0

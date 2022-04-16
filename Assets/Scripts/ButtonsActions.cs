@@ -14,8 +14,10 @@ public class ButtonsActions : Buttons
     
     public float transitionDelayTime = 5.0f;
     public static bool isPause;
+    
     private Animator _animator;
-    private bool isMenu;
+    private bool _isMenu;
+
     private void Awake()
     {
         _animator = GameObject.Find("Transition").GetComponent<Animator>();
@@ -25,7 +27,7 @@ public class ButtonsActions : Buttons
     {
         deleteFireList = false;
         isPause = false;
-        isMenu = true;
+        _isMenu = true;
     }
 
     public void OnOpenTwitterLink()
@@ -40,11 +42,17 @@ public class ButtonsActions : Buttons
 
     public void OnOption()
     {
-        print("Options was opened");
+        print("Options");
+    }
+
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(0, 0,200, 200), "nothing :)");
     }
 
     public void OnPlay()
     {
+        
         StartCoroutine(DelayLoadTransitionInGame());
     }
 
@@ -81,7 +89,7 @@ public class ButtonsActions : Buttons
     {
         GamePlay.callsReplayWindow = 0;
         deleteFireList = true;
-        StartCoroutine(DelayLoadTransitionInMenu());
+        StartCoroutine(DelayLoadTransitionInGame());
     }
 
     IEnumerator DelayLoadTransitionInGame()
@@ -89,7 +97,7 @@ public class ButtonsActions : Buttons
         yield return new WaitForSeconds(transitionDelayTime);
         _animator.Play("TransitionOut");
         SceneManager.LoadScene("Game");
-        isMenu = false;
+        _isMenu = false;
     }
 
     IEnumerator DelayLoadTransitionInMenu()
@@ -102,6 +110,6 @@ public class ButtonsActions : Buttons
         yield return new WaitForSeconds(transitionDelayTime);
         _animator.Play("TransitionIn");
         SceneManager.LoadScene("Menu");
-        isMenu = true;
+        _isMenu = true;
     }
 }
