@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.PlayerLoop;
-using Random = System.Random;
 
 public class CloudCreator : MonoBehaviour
 {
@@ -22,7 +17,7 @@ public class CloudCreator : MonoBehaviour
         _cloudList = new List<GameObject>();
         for (int i = 0; i < startCountClouds; i++)
         {
-            int randomCloud = UnityEngine.Random.Range(0, cloudPrefabs.Count);
+            int randomCloud = Random.Range(0, cloudPrefabs.Count);
             GameObject cloudGO = Instantiate<GameObject>(cloudPrefabs[randomCloud]);
             Vector3 posAnchor = transform.position;
             posAnchor.x *= -(i/1.5f);
@@ -49,7 +44,7 @@ public class CloudCreator : MonoBehaviour
 
     private void CreateCloud()
     {
-        int randomCloud = UnityEngine.Random.Range(0, cloudPrefabs.Count);
+        int randomCloud = Random.Range(0, cloudPrefabs.Count);
         GameObject cloudGO = Instantiate<GameObject>(cloudPrefabs[randomCloud]);
         cloudGO.transform.position = transform.position;
         _cloudList.Add(cloudGO);

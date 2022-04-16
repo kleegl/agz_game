@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using Button = UnityEngine.UIElements.Button;
 using Random = UnityEngine.Random;
 
 public class GamePlay : MonoBehaviour
