@@ -18,7 +18,10 @@ public class GamePlay : MonoBehaviour
     [Header("UI")] 
     public Text scoreText;
     public Text timeInGame;
-    
+    public Text bestScoreText;
+    public Text countFireText;
+        
+    private int _bestScore;
     private List<GameObject> _fireList;
     private int callsCount = 0;
 
@@ -32,7 +35,10 @@ public class GamePlay : MonoBehaviour
     {
         _fireList = new List<GameObject>();
         Invoke("CreateFire", 2f);
+        
+        LoadPrefs();
     }
+    
 
     private void Update()
     {
@@ -55,8 +61,16 @@ public class GamePlay : MonoBehaviour
         
         if(ButtonsActions.deleteFireList)
             DeleteFireList();
-        
+
+        if (Score > _bestScore)
+        {
+            _bestScore = Score;
+            SavePref();
+        }
+
+        bestScoreText.text = $"{_bestScore}";
         scoreText.text = $"{Score}";
+        countFireText.text = $"{_fireList.Count}";
     }
 
     private void CreateFire()
@@ -79,6 +93,7 @@ public class GamePlay : MonoBehaviour
             callsReplayWindow += 1;
             ButtonsActions.isPause = true;
             replayWindowPrefab.SetActive(true);
+            callsReplayWindow = 0;
         }
     }
 
@@ -89,5 +104,22 @@ public class GamePlay : MonoBehaviour
         _fireList.Clear();
         ButtonsActions.deleteFireList = false;
         callsReplayWindow = 0;
+    }
+
+    public void DeleteSingleFire(Collision2D fireCollision)
+    {
+        _fireList.Remove(fireCollision.gameObject);
+        Destroy(fireCollision.gameObject);
+    }
+
+    private void SavePref()
+    {
+        PlayerPrefs.SetInt("BestScore", _bestScore);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadPrefs()
+    {
+        _bestScore = PlayerPrefs.GetInt("BestScore");
     }
 }

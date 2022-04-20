@@ -41,7 +41,6 @@ public class ButtonsActions : Buttons
     
     public void OnPlay()
     {
-        
         StartCoroutine(DelayLoadTransitionInGame());
     }
 
@@ -71,6 +70,7 @@ public class ButtonsActions : Buttons
 
     public void OnMenu()
     {
+        GamePlay.callsReplayWindow = 0;
         StartCoroutine(DelayLoadTransitionInMenu());
     }
 
@@ -87,6 +87,7 @@ public class ButtonsActions : Buttons
         _animator.Play("TransitionOut");
         SceneManager.LoadScene("Game");
         _isMenu = false;
+        deleteFireList = true;
         GamePlay.Score = 0;
     }
 

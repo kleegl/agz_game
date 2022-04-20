@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
-
 
 public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -31,8 +26,6 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
         _centerZone = _circleColl.bounds.center;
         _boundsX = new []{_centerZone.x + _circleColl.radius, _centerZone.x - _circleColl.radius};
         _boundsY = new []{_centerZone.y + _circleColl.radius, _centerZone.y - _circleColl.radius};
-        // print(_boundsX);
-        // print(_boundsY);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -42,9 +35,7 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
     public void OnDrag(PointerEventData eventData)
     {
-        // print("click");
         _posInGame = _camera.ScreenToWorldPoint(new Vector3(eventData.position.x, eventData.position.y, _zAxis));
-        // print(_posInGame);
 
         if ((_posInGame.x > _boundsX[0]) || (_posInGame.x < _boundsX[1]) || (_posInGame.y > _boundsY[0]) ||
             (_posInGame.y < _boundsY[1]))

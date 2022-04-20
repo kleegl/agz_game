@@ -1,13 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    private GamePlay _gamePlayScript;
     private GameObject ground;
     private Camera _camera;
+    
 
     private void Start()
     {
@@ -15,6 +13,14 @@ public class Projectile : MonoBehaviour
         ground = GameObject.FindGameObjectWithTag("Ground");
     }
 
+    private void Update()
+    {
+        _gamePlayScript = _camera.GetComponent<GamePlay>();
+        
+        if(transform.position.y < ground.transform.position.y)
+            Destroy(this.gameObject);
+    }
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.CompareTag("Ground"))
@@ -23,15 +29,9 @@ public class Projectile : MonoBehaviour
         if (other.transform.CompareTag("Fire"))
         {
             Destroy(this.gameObject);
-            Destroy(other.gameObject);
+            _gamePlayScript.DeleteSingleFire(other);
 
             GamePlay.Score += 1;
         }
-    }
-
-    private void Update()
-    {
-        if(transform.position.y < ground.transform.position.y)
-            Destroy(this.gameObject);
     }
 }
