@@ -23,6 +23,7 @@
           <e p="GamePlay.cs" t="Include" />
           <e p="Input.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
           <e p="Transition.cs" t="Include" />
           <e p="UnityPurchasing" t="Include">
             <e p="generated" t="Include">

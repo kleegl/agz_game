@@ -23,7 +23,13 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     private IPointerDownHandler _pointerDownHandlerImplementation;
     [SerializeField] private SpriteRenderer _craneSprite;
     [SerializeField] private Sprite[] _sprites;
-    
+    [SerializeField] private SoundManager _soundManager;
+
+
+    private void Awake()
+    {
+        _soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+    }
 
     private void Start()
     {
@@ -101,6 +107,7 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     
     private void ShootProjectile()
     {
+        _soundManager.PlaySwing();
         _rb.bodyType = RigidbodyType2D.Dynamic;
         Vector3 mouseDelta = _centerOfZone.position - _posInGame;
         _rb.velocity = -mouseDelta * speedProjectile;
