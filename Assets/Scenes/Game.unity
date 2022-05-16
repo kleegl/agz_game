@@ -2723,7 +2723,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 811d690fa4bdf594da47c8c88f3f9143, type: 3}
+    m_Font: {fileID: 12800000, guid: 2043d2093341bc743aee868ddbf02957, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -2735,7 +2735,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: '
+  m_Text: "\u0421\u0447\u0435\u0442: "
 --- !u!222 &1257551195
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3658,7 +3658,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 811d690fa4bdf594da47c8c88f3f9143, type: 3}
+    m_Font: {fileID: 12800000, guid: 2043d2093341bc743aee868ddbf02957, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -3670,7 +3670,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: game over
+  m_Text: "\u041A\u043E\u043D\u0435\u0446 \u0438\u0433\u0440\u044B"
 --- !u!1 &3172648247403882161
 GameObject:
   m_ObjectHideFlags: 0

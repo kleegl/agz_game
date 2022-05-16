@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4568601182787107406}
   - component: {fileID: -7482590692481167826}
   - component: {fileID: 8825179822327214114}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bucket
   m_TagString: Bucket
   m_Icon: {fileID: 0}
