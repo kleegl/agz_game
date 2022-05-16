@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class ButtonsActions : Buttons
@@ -46,6 +47,7 @@ public class ButtonsActions : Buttons
 
     public void OnQuit()
     {
+        UnityEngine.Input.GetKeyDown(KeyCode.Escape);
         Application.Quit();
     }
 
