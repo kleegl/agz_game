@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Buttons" t="Include">
+            <e p="AudioButton.cs" t="Include" />
             <e p="HitGubButton.cs" t="Include" />
             <e p="MenuButton.cs" t="Include" />
             <e p="OptionButton.cs" t="Include" />
@@ -23,6 +24,7 @@
           <e p="GamePlay.cs" t="Include" />
           <e p="Input.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
           <e p="Transition.cs" t="Include" />
           <e p="UnityPurchasing" t="Include">
             <e p="generated" t="Include">

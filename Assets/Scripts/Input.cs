@@ -21,6 +21,15 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     private float[] _boundsY;
     private bool _canCreateProjectile;
     private IPointerDownHandler _pointerDownHandlerImplementation;
+    [SerializeField] private SpriteRenderer _craneSprite;
+    [SerializeField] private Sprite[] _sprites;
+    [SerializeField] private SoundManager _soundManager;
+
+
+    private void Awake()
+    {
+        _soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+    }
 
     private void Start()
     {
@@ -31,15 +40,17 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
         _boundsX = new []{_centerZone.x + _circleColl.radius, _centerZone.x - _circleColl.radius};
         _boundsY = new []{_centerZone.y + _circleColl.radius, _centerZone.y - _circleColl.radius};
         _canCreateProjectile = true;
+        _craneSprite.sprite = _sprites[0];
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-    //     if ((UnityEngine.Input.GetMouseButton(0)) && (_canCreateProjectile))
-    //     {
-    //         _canCreateProjectile = false;
-    //         CreateProjectile();
-    //     }
+        if ((UnityEngine.Input.GetMouseButton(0)) && (_canCreateProjectile))
+        {
+            _craneSprite.sprite = _sprites[1];
+            _canCreateProjectile = false;
+            CreateProjectile();
+        }
     }
     
     // private void Update()
@@ -82,6 +93,7 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
             eventData.Reset();
         ShootProjectile();
         _canCreateProjectile = true;
+        _craneSprite.sprite = _sprites[0];
     }
 
     private void CreateProjectile()
@@ -95,6 +107,7 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     
     private void ShootProjectile()
     {
+        _soundManager.PlaySwing();
         _rb.bodyType = RigidbodyType2D.Dynamic;
         Vector3 mouseDelta = _centerOfZone.position - _posInGame;
         _rb.velocity = -mouseDelta * speedProjectile;
@@ -104,10 +117,10 @@ public class Input : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if ((UnityEngine.Input.GetMouseButton(0)) && (_canCreateProjectile))
-        {
-            _canCreateProjectile = false;
-            CreateProjectile();
-        }
+        // if ((UnityEngine.Input.GetMouseButton(0)) && (_canCreateProjectile))
+        // {
+        //     _canCreateProjectile = false;
+        //     CreateProjectile();
+        // }
     }
 }

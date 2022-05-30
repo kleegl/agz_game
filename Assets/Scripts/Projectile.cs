@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -5,7 +6,13 @@ public class Projectile : MonoBehaviour
     private GamePlay _gamePlayScript;
     private GameObject ground;
     private Camera _camera;
-    
+    private SoundManager _soundManager;
+
+    private void Awake()
+    {
+        _soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+    }
+
 
     private void Start()
     {
@@ -28,6 +35,7 @@ public class Projectile : MonoBehaviour
 
         if (other.transform.CompareTag("Fire"))
         {
+            _soundManager.PlaySteam();
             Destroy(this.gameObject);
             _gamePlayScript.DeleteSingleFire(other);
 
