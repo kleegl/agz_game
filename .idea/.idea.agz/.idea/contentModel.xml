@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Buttons" t="Include">
+            <e p="AudioButton.cs" t="Include" />
             <e p="HitGubButton.cs" t="Include" />
             <e p="MenuButton.cs" t="Include" />
             <e p="OptionButton.cs" t="Include" />
